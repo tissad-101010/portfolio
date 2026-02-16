@@ -1,41 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   globals.css                                        :+:      :+:    :+:   */
+/*   darkMode.ts                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/16 15:18:44 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/16 17:43:44 by tissad           ###   ########.fr       */
+/*   Created: 2026/02/16 17:59:31 by tissad            #+#    #+#             */
+/*   Updated: 2026/02/16 18:38:36 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-@import "./tokens.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-@layer base {
-  body {
-    @apply bg-background text-foreground antialiased;
-    
-  }
-  body.dark {
-    @apply bg-background text-foreground;
-  }
-
-  h1 {
-    @apply text-4xl font-bold tracking-tight;
-  }
-
-  h2 {
-    @apply text-2xl font-semibold;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
+// utils/darkMode.ts
+export function toggleDarkMode() {
+  const root = document.documentElement // <html>
+    root.classList.toggle('dark')
 }

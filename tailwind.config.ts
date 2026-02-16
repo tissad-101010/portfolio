@@ -11,8 +11,6 @@ const config: Config = {
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         danger: "rgb(var(--color-danger) / <alpha-value>)",
         foreground: "rgb(var(--color-foreground) / <alpha-value>)",
-        "background-start-rgb": "rgb(var(--background-start-rgb) / <alpha-value>)",
-        "background-end-rgb": "rgb(var(--background-end-rgb) / <alpha-value>)",
       },
       borderRadius: {
         base: "var(--radius-base)",
