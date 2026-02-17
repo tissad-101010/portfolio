@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Tahar Issad - Portfolio',
   description: 'Développeur Full-Stack / C++ & Web',
   icons: [
-    { rel: 'icon', url: '/favicon.ico' },
+    { rel: 'icon', url: 'favicon.ico' },
   ],
 
 }
