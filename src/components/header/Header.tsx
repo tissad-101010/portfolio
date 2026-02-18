@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 16:57:18 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 14:54:25 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 15:43:59 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ export default function Header() {
 								Tahar Issad - Portfolio
 							</h1>
 							<p className="text-sm text-gray-500 dark:text-gray-300">
-								Full-Stack Developer
+								Full-Stack Developer/Software Engineer
 							</p>
 						</div>
 					</div>

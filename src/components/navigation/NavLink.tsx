@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 10:48:37 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 14:53:14 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 15:43:16 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ export const footerNavLinkClass = {
 
 // Items for the navigation menu
 export const navItems = [
-	{ href: "#projets", label: "Projets" },
-	{ href: "#apropos", label: "À propos" },
+	{ href: "#about", label: "About" },
+	{ href: "#projects", label: "Projects" },
 	{ href: "#contact", label: "Contact" },
 	{ href: "#cv", label: "CV" },
 ]

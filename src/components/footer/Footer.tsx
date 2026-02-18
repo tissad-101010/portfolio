@@ -6,11 +6,13 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 12:53:48 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 14:53:46 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 15:41:25 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 import { NavLink, navItems, footerNavLinkClass } from "../navigation/NavLink"
+import { SocialMedia } from "../navigation/SocialMedia"
+
 
 export default function Footer() {
 	return (
@@ -51,6 +53,13 @@ export default function Footer() {
 						<h3 className="text-lg font-semibold mb-4 dark:text-gray-300">
 							Social Media
 						</h3>
+						
+						<SocialMedia />
+
+						<a href="mailto:tahar.issad@example.com" 
+								className="text-gray-400 hover:text-white transition-colors">
+									issad.tahar@icloud.com
+            </a>
 					</div>	
 					
 				</div>
