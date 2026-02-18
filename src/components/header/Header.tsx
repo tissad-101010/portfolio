@@ -6,12 +6,12 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 16:57:18 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 12:48:25 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 14:33:21 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 import { useState } from "react"
-import { NavLink, navItems } from "./NavLink"
+import { NavLink, navItems } from "../navigation/NavLink"
 import { MenuIcon, menuButtonClass } from "./MenuIcon"
 
 
