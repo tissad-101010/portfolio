@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 16:57:18 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 12:43:32 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 12:48:25 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ export default function Header() {
 					{/*  Logo and title */}
 					<div className="flex items-center space-x-3">
 						{/* Logo */}
-						<div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center dark:bg-gray-600">
+						<div className="w-10 h-10 bg-blue-500 rounded-full 
+														flex items-center justify-center dark:bg-gray-600">
 							<svg 
 								className="w-6 h-6 text-white dark:text-gray-300" 
 								fill="currentColor" 
