@@ -6,12 +6,13 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 16:57:18 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 11:11:32 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 12:43:32 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 import { useState } from "react"
 import { NavLink, navItems } from "./NavLink"
+import { MenuIcon, menuButtonClass } from "./MenuIcon"
 
 
 export default function Header() {
@@ -56,15 +57,15 @@ export default function Header() {
 					
 				{/* buger for mobile view */}
 				<div className="md:hidden flex items-center">
-					<button className="text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:text-gray-300 dark:hover:text-white dark:focus:ring-gray-300" 
-						onClick={() => setIsOpen(!isOpen)}>
-						<svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							{isOpen ? (
-                				<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              				) : (
-                				<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              				)}
-						</svg>
+					<button
+						type="button"
+						className={`${menuButtonClass.base} 
+							${menuButtonClass.lightMode} 
+							${menuButtonClass.darkMode}`}
+						onClick={() => setIsOpen((prev) => !prev)}
+						aria-label="Toggle menu"
+					>
+						<MenuIcon isOpen={isOpen} />
 					</button>
 				</div>
 				</div>
