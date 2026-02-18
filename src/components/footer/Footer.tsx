@@ -6,11 +6,11 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 12:53:48 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 14:34:37 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 14:53:46 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-import { NavLink, navItems } from "../navigation/NavLink"
+import { NavLink, navItems, footerNavLinkClass } from "../navigation/NavLink"
 
 export default function Footer() {
 	return (
@@ -22,8 +22,15 @@ export default function Footer() {
 					{/* a bout section */}
 					<div>
 						<h3 className="text-lg font-semibold mb-4 dark:text-gray-300">
-							About Me
+							Tahar Issad
 						</h3>
+						<p className="text-gray-400 text-sm leading-relaxed dark:text-silver">
+							Full satck developer, software engineer, and lifelong learner.
+							Building scalable and user-friendly web applications.
+							Using modern technologies to solve real-world problems 
+							and create impactful solutions.
+
+						</p>
 					</div>
 					{/* Navigation links */}
 					<div>
@@ -33,7 +40,8 @@ export default function Footer() {
 						<ul className="space-y-2">
 							{navItems.map((item) => (
 								<li key={item.href}>
-									<NavLink href={item.href} label={item.label} />
+									<NavLink href={item.href} label={item.label} 
+									navClass={footerNavLinkClass} />
 								</li>
 							))}
 						</ul>
