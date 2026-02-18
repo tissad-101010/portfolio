@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 14:12:22 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/17 22:48:30 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 10:48:19 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 
 import { toggleDarkMode } from './darkMode'
-import Header from '../components/Header' 
+import Header from '../components/header/Header' 
 
 
 
