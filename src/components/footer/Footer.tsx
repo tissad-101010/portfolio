@@ -6,12 +6,12 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 12:53:48 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 15:41:25 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 18:21:14 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 import { NavLink, navItems, footerNavLinkClass } from "../navigation/NavLink"
-import { SocialMedia } from "../navigation/SocialMedia"
+import { Networks, footerClass } from "../navigation/Networks"
 
 
 export default function Footer() {
@@ -54,7 +54,7 @@ export default function Footer() {
 							Social Media
 						</h3>
 						
-						<SocialMedia />
+						<Networks className={footerClass} />
 
 						<a href="mailto:tahar.issad@example.com" 
 								className="text-gray-400 hover:text-white transition-colors">

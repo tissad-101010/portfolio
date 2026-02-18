@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 14:12:22 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 16:58:31 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/18 18:03:14 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ import { toggleDarkMode } from './darkMode'
 import Header from '../components/header/Header' 
 import Footer from '../components/footer/Footer'
 import Hero from '../components/body/Hero'
+import Contact from '../components/body/Contact'
 
 
 
@@ -32,7 +33,7 @@ export default function Home() {
       <button className="bg-primary text-foreground p-2 rounded hover:bg-primary/80 transition-colors" onClick={() => toggleDarkMode()}>
           Toggle Dark Mode
       </button>
-
+      <Contact />
       <Footer />
     </main>
   )

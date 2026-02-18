@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SocialMedia.tsx                                    :+:      :+:    :+:   */
+/*   Networks.tsx                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,13 +11,17 @@
 /* ************************************************************************** */
 
 
-interface SocialMediaLink {
+interface NetworksLink {
 	href: string
 	label: string
 	icon: JSX.Element
 }
 
-const socialMediaLinks: SocialMediaLink[] = [
+export const footerClass = "w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors duration-200 dark:bg-gray-600 dark:hover:bg-gray-500"
+						
+export const infoClass = "w-12 h-12  rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors duration-200 dark:bg-gray-600 dark:hover:bg-gray-500"
+
+const NetworksLinks: NetworksLink[] = [
 	{
 		href: "https://github.com/tissad-101010",
 		label: "GitHub",
@@ -41,10 +45,10 @@ const socialMediaLinks: SocialMediaLink[] = [
 	}
 ]
 
-export function SocialMedia() {
+export function Networks({ className }: { className: string }) {
 	return (
 		<div className="flex space-x-4">    
-			{socialMediaLinks.map((link) => (
+			{NetworksLinks.map((link) => (
 				<a 
 						
 					key={link.href}
@@ -52,9 +56,7 @@ export function SocialMedia() {
 					target="_blank"
 
 					rel="noopener noreferrer"
-					className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center 
-					hover:bg-gray-700 transition-colors duration-200 dark:bg-gray-600 dark:hover:bg-gray-500"
-						
+					className= {`${className}`}
 				>
 					{link.icon}
 					<span className="sr-only">{link.label}</span>
