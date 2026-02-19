@@ -6,7 +6,7 @@
 #    By: tissad <tissad@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/17 22:57:49 by tissad            #+#    #+#              #
-#    Updated: 2026/02/17 23:35:15 by tissad           ###   ########.fr        #
+#    Updated: 2026/02/19 18:25:59 by tissad           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ build:
 # Start the production server
 start: build
 	@echo "🚀 Starting Next.js production server..."
-	@npm start
+	npx serve@latest out
 
 # Export the site as a static application
 export: build

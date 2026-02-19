@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 10:48:37 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/19 17:22:01 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/19 18:00:29 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ interface NavLinkProps {
 }
 
 // handle dark mode toggle 
+// change the text of the button based on the current mode
 export function handleDarkModeToggle() {
+	
 	return (
-		<a
+		<a id="darkMode"
 			onClick={toggleDarkMode}
 			className="ml-4 p-2 rounded-md bg-gray-200 hover:bg-gray-300 transition-colors dark:bg-gray-600 dark:hover:bg-gray-500"
 		>

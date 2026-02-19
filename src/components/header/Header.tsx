@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 16:57:18 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/19 17:22:48 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/19 18:15:44 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,15 @@ export default function Header() {
 					<button
 						type="button"
 						className={`${menuButtonClass.base} 
-							${menuButtonClass.lightMode} 
-							${menuButtonClass.darkMode}`}
-						onClick={() => setIsOpen((prev) => !prev)}
+									${menuButtonClass.lightMode} 
+									${menuButtonClass.darkMode}`} 
+									
+						onClick={() => setIsOpen(prev => !prev)} 
+						
 						aria-label="Toggle menu"
+						aria-expanded={isOpen}
 					>
+
 						<MenuIcon isOpen={isOpen} />
 					</button>
 				</div>
