@@ -33,7 +33,7 @@ export default function Hero() {
 				<div className="w-full md:w-auto flex-shrink-0">
 					<div>
 						<img className="relative bg-gradient-to-br rounded-xl shadow-lg" 
-									src="./tissad.jpg" alt="Tahar Issad" width={250} height={250} />
+									src="/portfolio/tissad.jpg" alt="Tahar Issad" width={250} height={250} />
 					</div>
 				</div>
 				{/* About me text */}
