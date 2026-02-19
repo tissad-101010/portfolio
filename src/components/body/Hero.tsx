@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:55:37 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/19 20:33:33 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/19 21:07:42 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ export default function Hero() {
 				{/* Profile image */}
 				<div className="w-full md:w-auto flex-shrink-0">
 					<div>
-						<Image className="relative bg-gradient-to-br rounded-xl shadow-lg" 
-									src="/tissad.jpg" alt="Tahar Issad" width={250} height={250} />
+						<img className="relative bg-gradient-to-br rounded-xl shadow-lg" 
+									src="./tissad.jpg" alt="Tahar Issad" width={250} height={250} />
 					</div>
 				</div>
 				{/* About me text */}
