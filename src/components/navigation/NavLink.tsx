@@ -6,9 +6,13 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 10:48:37 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 15:43:16 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/19 17:22:01 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+import { toggleDarkMode } from "@/src/app/darkMode"
+
 
 
 interface NavLinkClassProps {
@@ -23,7 +27,18 @@ interface NavLinkProps {
 	navClass: NavLinkClassProps
 }
 
-
+// handle dark mode toggle 
+export function handleDarkModeToggle() {
+	return (
+		<a
+			onClick={toggleDarkMode}
+			className="ml-4 p-2 rounded-md bg-gray-200 hover:bg-gray-300 transition-colors dark:bg-gray-600 dark:hover:bg-gray-500"
+		>
+			dark mode
+		</a>
+	)
+	
+}
 
 
 // Common classes for navigation links

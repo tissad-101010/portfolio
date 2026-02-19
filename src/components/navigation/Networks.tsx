@@ -64,4 +64,4 @@ export function Networks({ className }: { className: string }) {
 			))}
 		</div>
 	)
-}   
+}

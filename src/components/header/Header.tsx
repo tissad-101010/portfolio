@@ -6,12 +6,12 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 16:57:18 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 15:43:59 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/19 17:22:48 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 import { useState } from "react"
-import { NavLink, navItems, headerNavLinkClass } from "../navigation/NavLink"
+import { NavLink, navItems, headerNavLinkClass, handleDarkModeToggle } from "../navigation/NavLink"
 import { MenuIcon, menuButtonClass} from "./MenuIcon"
 
 
@@ -55,6 +55,8 @@ export default function Header() {
 								navClass={headerNavLinkClass}
 							/>
 						))}
+						{/* Dark mode toggle button */}
+						{handleDarkModeToggle()}
 					</div>
 					
 				{/* buger for mobile view */}
@@ -83,6 +85,8 @@ export default function Header() {
 									navClass={headerNavLinkClass}
 								/>
 							))}
+							{/* Dark mode toggle button */}
+							{handleDarkModeToggle()}
 						</div>
 					</div>
 				)}
