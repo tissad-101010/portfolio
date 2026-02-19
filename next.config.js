@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  basePath: '',
-  assetPrefix: '',
-}
+const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = nextConfig
+const nextConfig = {
+  output: 'export',      // génère un site statique
+  images: {
+    unoptimized: true,   // permet d'utiliser <Image /> ou <img>
+  },
+  basePath: isProd ? '/portfolio' : '',  // sous-dossier GitHub Pages
+  assetPrefix: isProd ? '/portfolio/' : '',
+};
+
+module.exports = nextConfig;

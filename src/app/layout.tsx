@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   description: 'Développeur Full-Stack / C++ & Web',
   icons: [
     { rel: 'icon', url: 'favicon.ico' },
+    { rel: 'image', url: 'tissad.jpg' },
   ],
+
+  keywords: ['Tahar Issad', 'Portfolio', 'Développeur Full-Stack', 'C++', 'Web Development', 'React', 'Node.js', 'Next.js', 'TailwindCSS'],
 
 }
 
