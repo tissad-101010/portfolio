@@ -6,16 +6,18 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 15:47:43 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/24 21:58:28 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/24 22:02:45 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 import { useState } from "react"
 import emailjs from '@emailjs/browser';
+import { time } from "console";
+import { title } from "process";
 
 const PUBLIC_KEY = "-2HxxGTlmHkiJQ78z"
 const SERVICE_ID = "service_ade4ss8"
-const TEMPLATE_ID = "template_5lsgb9g"
+const TEMPLATE_ID = "template_10vp6jp"
 
 export default function Form() {
 	const [formData, setFormData] = useState({
@@ -38,6 +40,7 @@ export default function Form() {
       SERVICE_ID,
       TEMPLATE_ID,
       {
+		title: `New message from ${formData.name}`,
         name: formData.name,
         email: formData.email,
         message: formData.message,
