@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 15:47:43 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/24 21:47:41 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/24 21:58:28 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ export default function Form() {
       SERVICE_ID,
       TEMPLATE_ID,
       {
-        from_name: formData.name,
-        from_email: formData.email,
+        name: formData.name,
+        email: formData.email,
         message: formData.message,
       },
       PUBLIC_KEY       
