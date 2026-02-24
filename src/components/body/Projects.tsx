@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:53:06 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/24 17:38:51 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/24 20:42:02 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ export default function Projects() {
 				This project provides a deep understanding of how web servers operate internally and \
 				of the HTTP protocol, one of the most widely used protocols on the internet.',
 			tags: ['C++', 'HTTP/1.1', 'Networking', 'Server Implementation', 'Sockets'],
-			github: 'https://github.com/tissad-101010/webserv.git',
+			github: 'https://github.com/tissad-101010/42cursus_webserv.git',
 		},
 		{
 			title: 'Inception',
@@ -83,6 +83,7 @@ export default function Projects() {
 				and low-level optimization while strengthening understanding of game engine fundamentals.',
 			tags: ['C', 'MiniLibX', 'Computer graphics', 'Trigonometry', 'Game development'],
 			github: 'https://github.com/tissad-101010/cub3d.git',
+			demo: '/portfolio/cub3d.webm',
 		},
 		{
 			title: 'NetPractice',
