@@ -22,7 +22,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr">
+    // set dark mode by default, user can toggle it with the button in the header
+    <html lang="fr" className="dark">
       <head> 
         <link rel="icon" href="favicon.ico" />
       </head> 

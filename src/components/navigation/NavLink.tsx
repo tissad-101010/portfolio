@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 10:48:37 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/19 18:00:29 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/24 22:08:45 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ export function handleDarkModeToggle() {
 			onClick={toggleDarkMode}
 			className="ml-4 p-2 rounded-md bg-gray-200 hover:bg-gray-300 transition-colors dark:bg-gray-600 dark:hover:bg-gray-500"
 		>
-			dark mode
+			light mode
 		</a>
 	)
 	
