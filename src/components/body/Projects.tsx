@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:53:06 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/24 16:51:03 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/24 17:38:51 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ export default function Projects() {
 				parameter optimization, and model training, laying the foundation for further \
 				studies in machine learning and applied mathematics.',
 			tags: ['Python', 'Machine Learning', 'Linear Regression', 'Gradient Descent'],
-			github: 'https://github.com/tissad-101010/ft_linear_regression.git',
+			github: 'https://github.com/tissad-101010/linear_regression.git',
 		},
 		{
 			title: 'Webserv',
@@ -69,7 +69,7 @@ export default function Projects() {
 				reinforcing best practices in system administration, containerization, \
 				and secure web service deployment.',
 			tags: ['Docker', 'Docker Compose', 'NGINX', 'WordPress', 'MariaDB'],
-			github: 'https://github.com/tissad-101010/inception.git',
+			github: 'https://github.com/tissad-101010/42cursus_Inception.git',
 		},
 		{
 			title: 'cub3d',
