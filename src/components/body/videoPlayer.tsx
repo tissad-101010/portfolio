@@ -4,13 +4,15 @@ type VideoPlayerProps = {
   src: string;
 };
 
-
-export default function VideoModal(src: VideoPlayerProps) {
+export default function VideoPlayer({ src }: VideoPlayerProps) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <button onClick={() => setOpen(true)}         className="
+      {/* Button to open modal */}
+      <button
+        onClick={() => setOpen(true)}
+        className="
           inline-flex items-center gap-2
           rounded-full
           bg-gradient-to-r from-indigo-500 to-violet-500
@@ -18,33 +20,54 @@ export default function VideoModal(src: VideoPlayerProps) {
           text-sm font-semibold text-white
           shadow-lg shadow-indigo-500/40
           transition
-          hover:-translate-y-0.5 hover:shadow-xl hover:shadow-indigo-500/50
-          active:translate-y-0
-          focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2
-        "       >
-        ▶ Demo
+          hover:-translate-y-0.5 hover:shadow-xl
+          focus:outline-none focus:ring-2 focus:ring-indigo-400
+        "
+      >
+        ▶ Watch Demo
       </button>
 
+      {/* Modal */}
       {open && (
         <div
           onClick={() => setOpen(false)}
-          style={{
-            position: "fixed",
-            inset: 0,
-            background: "rgba(0,0,0,0.7)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 1000,
-          }}
+          className="
+            fixed inset-0 z-50
+            flex items-center justify-center
+            bg-black/70 backdrop-blur-sm
+          "
         >
-          <video
-            src={src.src}
-            controls
-            autoPlay
+          <div
             onClick={(e) => e.stopPropagation()}
-            style={{ width: "80%", maxWidth: 800 }}
-          />
+            className="relative w-full max-w-4xl px-4"
+          >
+            {/* Bouton fermer */}
+            <button
+              onClick={() => setOpen(false)}
+              className="
+                absolute -top-10 right-2
+                text-white/80
+                hover:text-white
+                text-2xl font-bold
+                transition
+              "
+              aria-label="close"
+            >
+              ✕
+            </button>
+
+            {/* Vidéo */}
+            <video
+              src={src}
+              controls
+              autoPlay
+              className="
+                w-full
+                rounded-xl
+                shadow-2xl
+              "
+            />
+          </div>
         </div>
       )}
     </>
