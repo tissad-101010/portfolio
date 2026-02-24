@@ -6,12 +6,16 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 15:47:43 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/19 16:24:58 by tissad           ###   ########.fr       */
+/*   Updated: 2026/02/24 21:47:41 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 import { useState } from "react"
+import emailjs from '@emailjs/browser';
 
+const PUBLIC_KEY = "-2HxxGTlmHkiJQ78z"
+const SERVICE_ID = "service_ade4ss8"
+const TEMPLATE_ID = "template_5lsgb9g"
 
 export default function Form() {
 	const [formData, setFormData] = useState({
@@ -21,15 +25,38 @@ export default function Form() {
   })
 
   const handleSubmit = (e: React.FormEvent) => {
-		// clear the inputs after submission
-		setFormData({
-			name: '',	
-			email: '',
-			message: '',
-		})
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-  }
+    e.preventDefault();
+
+    // Vérifie que les champs ne sont pas vides
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('please fill in all fields');
+      return;
+    }
+
+    // Envoi avec EmailJS
+    emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      PUBLIC_KEY       
+    )
+    .then((response) => {
+      console.log('email sent !', response.status, response.text);
+      alert('Message sent successfully!');
+
+      // clear the inputs after successful submission
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch((err) => {
+      console.error('Failed to send email:', err);
+      alert('Failed to send message. Please try again later.');
+    });
+  };
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
