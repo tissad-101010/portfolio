@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:55:37 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/19 21:07:42 by tissad           ###   ########.fr       */
+/*   Updated: 2026/03/12 11:21:00 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ export default function Hero() {
 							hover:bg-blue-700 transition-colors shadow-md focus:outline-none 
 							focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
 							dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-300"
-							onClick={() => downloadFile('/tissad_cv.pdf', 'tissad_cv.pdf')}>
+							onClick={() => downloadFile('/portfolio/junior_developer_resume_en.pdf', 'junior_developer_resume_en.pdf')}>
 							
               Download CV
             </button>
