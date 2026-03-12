@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 10:48:37 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/24 22:08:45 by tissad           ###   ########.fr       */
+/*   Updated: 2026/03/12 11:40:53 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ export const navItems = [
 	{ href: "#about", label: "About" },
 	{ href: "#projects", label: "Projects" },
 	{ href: "#contact", label: "Contact" },
-	{ href: "#cv", label: "CV" },
+	{ href: "/portfolio/junior_developer_resume_en.pdf", label: "CV" },
 ]
 
 export function NavLink({ href, label, navClass }: NavLinkProps) {
