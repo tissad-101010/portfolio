@@ -36,7 +36,8 @@ export default function Projects() {
 			with data engineering and AI to make legislation more transparent and accessible.',
 			tags: ['React', 'next.js', 'TypeScript', 'PostgreSQL', 'Docker', 'Git / GitHub'],
 			github: 'https://github.com/tissad-101010/LoiHub.git',
-			demo: 'https://loihub.retrystudio.com/' 
+			demo: 'https://github.com/user-attachments/assets/5db2afaa-2ef0-4482-a698-9c5027bb22a2',
+			link:  'https://loihub.retrystudio.com/' 
 		},
 		{
 			title: 'Personal Portfolio Website',
