@@ -28,6 +28,17 @@ export default function Projects() {
 			github: 'https://github.com/tissad-101010/ft_transcendence.git',
 		},
 		{
+			title: '42 LoiHub',
+			description: 'LoiHub is an AI-powered web application that reimagines the legislative process \
+			 as a GitHub-like experience. It allows users to browse laws, track amendments as commits, \
+			 compare legislative revisions, explore timelines, and generate AI summaries from official \
+			 French National Assembly datasets. The project combines modern full-stack technologies \
+			with data engineering and AI to make legislation more transparent and accessible.',
+			tags: ['React', 'next.js', 'TypeScript', 'PostgreSQL', 'Docker', 'Git / GitHub'],
+			github: 'https://github.com/tissad-101010/LoiHub.git',
+			demo: 'https://loihub.retrystudio.com/' 
+		},
+		{
 			title: 'Personal Portfolio Website',
 			description: 'A responsive personal portfolio built with Next.js, React, and TailwindCSS, \
 				showcasing projects, skills, and contact functionality. Fully front-end, \
