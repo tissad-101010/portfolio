@@ -1,18 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Hero.tsx                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/18 16:55:37 by tissad            #+#    #+#             */
-/*   Updated: 2026/03/12 11:21:00 by tissad           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-`use client`
+'use client'
 
 import Image from 'next/image'
+import { fullName, profile, withBasePath } from '@/src/lib/portfolioData'
 
 function downloadFile(url: string, filename: string) {
   const a = document.createElement('a')
@@ -33,16 +22,14 @@ export default function Hero() {
 				<div className="w-full md:w-auto flex-shrink-0">
 					<div>
 						<Image className="relative bg-gradient-to-br rounded-xl shadow-lg"
-									src="/tissad.jpg" alt="Tahar Issad" width={250} height={250} priority />
+									src={withBasePath(profile.profileImage)} alt={fullName} width={250} height={250} priority />
 					</div>
 				</div>
 				{/* About me text */}
 				<div className="flex-1">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">About Me</h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-8 dark:text-gray-300">
-            I am a web developer with a passion for creating modern, responsive, and user-friendly
-            interfaces. Currently expanding my skills in cybersecurity and preparing for the ISC2
-            certification. I enjoy turning ideas into projects and constantly learning new technologies.
+						{profile.introduction}
           </p>
 					{/* Download CV button */}
           <div className="flex flex-wrap gap-4">
@@ -50,7 +37,7 @@ export default function Hero() {
 							hover:bg-blue-700 transition-colors shadow-md focus:outline-none 
 							focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
 							dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-300"
-							onClick={() => downloadFile('/portfolio/junior_developer_resume_en.pdf', 'junior_developer_resume_en.pdf')}>
+							onClick={() => downloadFile(withBasePath(profile.resume.url), profile.resume.filename)}>
 							
               Download CV
             </button>

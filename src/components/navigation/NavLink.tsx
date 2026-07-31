@@ -1,17 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   NavLink.tsx                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/18 10:48:37 by tissad            #+#    #+#             */
-/*   Updated: 2026/03/12 11:40:53 by tissad           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 
 import { toggleDarkMode } from "@/src/app/darkMode"
+import { profile, withBasePath } from "@/src/lib/portfolioData"
 
 
 
@@ -60,7 +49,7 @@ export const navItems = [
 	{ href: "#about", label: "About" },
 	{ href: "#projects", label: "Projects" },
 	{ href: "#contact", label: "Contact" },
-	{ href: "/portfolio/junior_developer_resume_en.pdf", label: "CV" },
+	...(profile.resume.url ? [{ href: withBasePath(profile.resume.url), label: "CV" }] : []),
 ]
 
 export function NavLink({ href, label, navClass }: NavLinkProps) {

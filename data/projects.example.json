@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Example project",
+    "description": "A short, factual description of the project.",
+    "tags": ["Next.js", "TypeScript"],
+    "github": "https://github.com/example/project",
+    "demo": "https://example.com/demo.mp4",
+    "link": "https://project.example.com",
+    "image": "/project-cover.jpg",
+    "dates": "2025",
+    "features": ["Responsive interface", "Static deployment"]
+  }
+]

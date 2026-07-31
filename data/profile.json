@@ -1,0 +1,31 @@
+{
+  "firstName": "Tahar",
+  "lastName": "Issad",
+  "professionalTitle": "Full-Stack Developer/Software Engineer",
+  "metadataDescription": "Développeur Full-Stack / C++ & Web",
+  "introduction": "I am a web developer with a passion for creating modern, responsive, and user-friendly interfaces. Currently expanding my skills in cybersecurity and preparing for the ISC2 certification. I enjoy turning ideas into projects and constantly learning new technologies.",
+  "footerIntroduction": "Full satck developer, software engineer, and lifelong learner. Building scalable and user-friendly web applications. Using modern technologies to solve real-world problems and create impactful solutions.",
+  "email": "issad.tahar@icloud.com",
+  "location": "Paris, ile-de-France, France",
+  "availability": "stage, full-time",
+  "profileImage": "/tissad.jpg",
+  "pdfFilename": "Tahar_ISSAD_Portfolio.pdf",
+  "resume": {
+    "url": "/junior_developer_resume_en.pdf",
+    "filename": "junior_developer_resume_en.pdf"
+  },
+  "socialLinks": [
+    { "platform": "github", "label": "GitHub", "url": "https://github.com/tissad-101010" },
+    { "platform": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/tahar-issad-00b96836a/" },
+    { "platform": "codingame", "label": "Codingame", "url": "https://www.codingame.com/profile/acef26b8c33787d29c7f6db82756a2190362926" }
+  ],
+  "skills": [],
+  "education": [],
+  "experience": [],
+  "languages": [],
+  "emailJs": {
+    "publicKey": "-2HxxGTlmHkiJQ78z",
+    "serviceId": "service_ade4ss8",
+    "templateId": "template_10vp6jp"
+  }
+}

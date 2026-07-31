@@ -1,5 +1,5 @@
 import { spawn } from 'node:child_process'
-import { mkdir, stat } from 'node:fs/promises'
+import { mkdir, readFile, stat } from 'node:fs/promises'
 import { createServer } from 'node:net'
 import path from 'node:path'
 import process from 'node:process'
@@ -8,7 +8,9 @@ import { chromium } from 'playwright'
 
 const MAX_PDF_BYTES = 10 * 1024 * 1024
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const outputPath = path.join(rootDir, 'output', 'Tahar_ISSAD_Portfolio.pdf')
+const profile = JSON.parse(await readFile(path.join(rootDir, 'data', 'profile.json'), 'utf8'))
+const pdfName = (profile.pdfFilename || `${profile.firstName}_${profile.lastName}_Portfolio.pdf`).replace(/[^a-z0-9_.-]/gi, '_')
+const outputPath = path.join(rootDir, 'output', pdfName)
 
 function getAvailablePort() {
   return new Promise((resolve, reject) => {
@@ -94,10 +96,17 @@ try {
   await page.emulateMedia({ media: 'screen', colorScheme: 'dark', reducedMotion: 'reduce' })
   await page.goto(portfolioUrl, { waitUntil: 'domcontentloaded', timeout: 120_000 })
   await waitForPageAssets(page)
-  const publicBaseUrl = process.env.PDF_PUBLIC_BASE_URL || 'https://tissad-101010.github.io'
+  const githubProfile = profile.socialLinks?.find((link) => link.platform === 'github')?.url
+  const githubUsername = githubProfile ? new URL(githubProfile).pathname.split('/').filter(Boolean)[0] : ''
+  const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] || path.basename(rootDir)
+  const publicBaseUrl = process.env.PDF_PUBLIC_BASE_URL || (githubUsername ? `https://${githubUsername}.github.io/${repositoryName}` : '')
   await page.evaluate((baseUrl) => {
-    for (const link of document.querySelectorAll('a[href^="/portfolio/"]')) {
-      link.href = new URL(link.getAttribute('href'), baseUrl).href
+    if (!baseUrl) return
+    for (const link of document.querySelectorAll('a[href]')) {
+      const url = new URL(link.href)
+      if (url.hostname === '127.0.0.1' || url.hostname === 'localhost') {
+        link.href = `${baseUrl.replace(/\/$/, '')}${url.pathname}${url.search}${url.hash}`
+      }
     }
   }, publicBaseUrl)
   await page.emulateMedia({ media: 'print', colorScheme: 'dark', reducedMotion: 'reduce' })

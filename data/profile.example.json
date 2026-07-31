@@ -1,0 +1,31 @@
+{
+  "firstName": "Alex",
+  "lastName": "Morgan",
+  "professionalTitle": "Full-Stack Developer",
+  "metadataDescription": "Portfolio of Alex Morgan, full-stack developer",
+  "introduction": "I build accessible and reliable web applications.",
+  "footerIntroduction": "Full-stack developer focused on useful digital products.",
+  "email": "alex@example.com",
+  "location": "Lyon, France",
+  "availability": "Open to opportunities",
+  "profileImage": "/profile.jpg",
+  "pdfFilename": "Alex_Morgan_Portfolio.pdf",
+  "resume": {
+    "url": "/resume.pdf",
+    "filename": "alex_morgan_resume.pdf"
+  },
+  "socialLinks": [
+    { "platform": "github", "label": "GitHub", "url": "https://github.com/example" },
+    { "platform": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/example/" },
+    { "platform": "website", "label": "Website", "url": "https://example.com" }
+  ],
+  "skills": ["TypeScript", "React"],
+  "education": ["Example degree — Example School"],
+  "experience": ["Full-Stack Developer — Example Company"],
+  "languages": ["French", "English"],
+  "emailJs": {
+    "publicKey": "your_public_key",
+    "serviceId": "your_service_id",
+    "templateId": "your_template_id"
+  }
+}

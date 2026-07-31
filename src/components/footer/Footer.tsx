@@ -1,17 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Footer.tsx                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/18 12:53:48 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/18 18:21:14 by tissad           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 import { NavLink, navItems, footerNavLinkClass } from "../navigation/NavLink"
 import { Networks, footerClass } from "../navigation/Networks"
+import { fullName, profile } from "@/src/lib/portfolioData"
 
 
 export default function Footer() {
@@ -24,13 +13,10 @@ export default function Footer() {
 					{/* a bout section */}
 					<div>
 						<h3 className="text-lg font-semibold mb-4 dark:text-gray-300">
-							Tahar Issad
+							{fullName}
 						</h3>
 						<p className="text-gray-400 text-sm leading-relaxed dark:text-silver">
-							Full satck developer, software engineer, and lifelong learner.
-							Building scalable and user-friendly web applications.
-							Using modern technologies to solve real-world problems 
-							and create impactful solutions.
+							{profile.footerIntroduction}
 
 						</p>
 					</div>
@@ -56,9 +42,9 @@ export default function Footer() {
 						
 						<Networks className={footerClass} />
 
-						<a href="mailto:tahar.issad@example.com" 
+						<a href={`mailto:${profile.email}`}
 								className="text-gray-400 hover:text-white transition-colors">
-									issad.tahar@icloud.com
+									{profile.email}
             </a>
 					</div>	
 					
@@ -67,10 +53,10 @@ export default function Footer() {
 				<div className="border-t border-gray-800 mt-8 pt-8 text-center 
 					text-gray-400 dark:border-gray-700 dark:text-gray-500">
 					<p className="text-sm text-gray-400">
-						&copy; {new Date().getFullYear()} Tahar Issad. All rights reserved.
+						&copy; {new Date().getFullYear()} {fullName}. All rights reserved.
 					</p>
 					<p className="text-gray-500 text-xs mt-2">
-						Designed and developed by Tahar Issad using Next.js and Tailwind CSS.	
+						Designed and developed by {fullName} using Next.js and Tailwind CSS.
 					</p>								
 				</div>
 

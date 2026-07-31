@@ -2,18 +2,19 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '../style/globals.css'
 import '../style/print.css'
+import { fullName, profile } from '../lib/portfolioData'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Tahar Issad - Portfolio',
-  description: 'Développeur Full-Stack / C++ & Web',
+  title: `${fullName} - Portfolio`,
+  description: profile.metadataDescription,
   icons: [
     { rel: 'icon', url: 'favicon.ico' },
-    { rel: 'image', url: 'tissad.jpg' },
+    { rel: 'image', url: profile.profileImage },
   ],
 
-  keywords: ['Tahar Issad', 'Portfolio', 'Développeur Full-Stack', 'C++', 'Web Development', 'React', 'Node.js', 'Next.js', 'TailwindCSS'],
+  keywords: [fullName, 'Portfolio', profile.professionalTitle, ...(profile.skills ?? [])],
 
 }
 

@@ -1,19 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Contact.tsx                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/18 16:55:33 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/19 17:11:16 by tissad           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 'use client'
 
-import { GithubIcon, LinkedInIcon, CodingameIcon } from './ContactsIcons'
 import Form from './Form'
+import { Networks, infoClass } from '../navigation/Networks'
+import { profile } from '@/src/lib/portfolioData'
 
 
 export default function Contact() {
@@ -46,8 +35,8 @@ export default function Contact() {
 								<div>
 								<h4 className="font-medium text-gray-900 dark:text-gray-300">Email</h4>
 								<p className="text-blue-600 dark:text-white">
-									<a href="mailto:issad.tahar@icloud.com">
-									issad.tahar@icloud.com
+									<a href={`mailto:${profile.email}`}>
+									{profile.email}
 									</a>
 								</p>
 								</div>
@@ -62,7 +51,7 @@ export default function Contact() {
 								</div>
 								<div>
 								<h4 className="font-medium text-gray-900 dark:text-gray-300">Location</h4>
-								<p className="text-gray-600 dark:text-gray-400">Paris, ile-de-France, France</p>
+								<p className="text-gray-600 dark:text-gray-400">{profile.location}</p>
 								</div>
 							</div>
 
@@ -74,7 +63,7 @@ export default function Contact() {
 								</div>
 								<div>
 								<h4 className="font-medium text-gray-900 dark:text-gray-300">Open to work</h4>
-								<p className="text-gray-600 dark:text-gray-400">stage, full-time</p>
+								<p className="text-gray-600 dark:text-gray-400">{profile.availability}</p>
 								</div>
 							</div>
 						</div>
@@ -83,11 +72,7 @@ export default function Contact() {
 							<h3 className="text-xl font-semibold text-gray-900 mb-4 dark:text-gray-300">
 								Find me on
 							</h3>
-								<div className="flex space-x-4">
-								<GithubIcon />
-								<CodingameIcon />
-								<LinkedInIcon />
-							</div>
+							<Networks className={infoClass} platformOrder={['github', 'codingame', 'linkedin']} />
 						</div>
 						
 					</div>

@@ -1,18 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Header.tsx                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/17 16:57:18 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/19 18:15:44 by tissad           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 import { useState } from "react"
 import { NavLink, navItems, headerNavLinkClass, handleDarkModeToggle } from "../navigation/NavLink"
 import { MenuIcon, menuButtonClass} from "./MenuIcon"
+import { fullName, profile } from "@/src/lib/portfolioData"
 
 
 export default function Header() {
@@ -37,10 +26,10 @@ export default function Header() {
 						{/*  Title and subtitle */}
 						<div>
 							<h1 className="text-2xl font-bold dark:text-white">
-								Tahar Issad - Portfolio
+								{fullName} - Portfolio
 							</h1>
 							<p className="text-sm text-gray-500 dark:text-gray-300">
-								Full-Stack Developer/Software Engineer
+								{profile.professionalTitle}
 							</p>
 						</div>
 					</div>
@@ -97,4 +86,4 @@ export default function Header() {
 			</nav>
 		</header>
 	)
-}    
+}

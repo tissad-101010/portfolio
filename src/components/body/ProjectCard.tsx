@@ -1,28 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ProjectCard.tsx                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/18 16:54:39 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/24 20:39:29 by tissad           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 'use client'
 
 import VideoModal from "./videoPlayer"
-import VideoPlayerProps from "./videoPlayer";
-interface ProjectCardProps {
-  title: string
-  description: string
-  tags: string[]
-  github: string
-  demo ?: string | null
-}
+import { withBasePath } from "@/src/lib/portfolioData"
+import type { Project } from "@/src/types/portfolio"
 
-export default function ProjectCard({ title, description, tags, github, demo }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tags = [], github, demo }: Project) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 dark:bg-gray-900" >
       <div className="h-48 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 flex items-center justify-center">
@@ -62,7 +44,7 @@ export default function ProjectCard({ title, description, tags, github, demo }: 
             </a>
             {demo && (
               <div className="mt-4">
-                <VideoModal src={demo} />
+                <VideoModal src={withBasePath(demo)} />
               </div>
             )}
           </div>
