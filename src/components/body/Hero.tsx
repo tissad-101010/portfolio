@@ -32,8 +32,8 @@ export default function Hero() {
 				{/* Profile image */}
 				<div className="w-full md:w-auto flex-shrink-0">
 					<div>
-						<img className="relative bg-gradient-to-br rounded-xl shadow-lg" 
-									src="/portfolio/tissad.jpg" alt="Tahar Issad" width={250} height={250} />
+						<Image className="relative bg-gradient-to-br rounded-xl shadow-lg"
+									src="/tissad.jpg" alt="Tahar Issad" width={250} height={250} priority />
 					</div>
 				</div>
 				{/* About me text */}

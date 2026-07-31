@@ -1,0 +1,124 @@
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  html,
+  body,
+  main {
+    background: rgb(15 23 42) !important;
+    color: rgb(248 250 252) !important;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    caret-color: transparent !important;
+    transition: none !important;
+  }
+
+  header {
+    position: static !important;
+  }
+
+  header nav > div > div:nth-child(2),
+  header nav > div > div:nth-child(3),
+  #darkMode,
+  #about button,
+  #projects button,
+  #contact form button {
+    display: none !important;
+  }
+
+  header,
+  section,
+  footer {
+    break-inside: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a,
+  li,
+  form > div,
+  #contact .flex.items-start {
+    break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    break-after: avoid;
+  }
+
+  #about,
+  #projects,
+  #contact,
+  footer {
+    padding-top: 8mm !important;
+    padding-bottom: 8mm !important;
+  }
+
+  #projects > div > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 5mm !important;
+  }
+
+  #projects > div > div:last-child > div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  #projects > div > div:last-child > div > div:first-child {
+    height: 24mm !important;
+  }
+
+  #projects > div > div:last-child > div > div:last-child {
+    padding: 4mm !important;
+  }
+
+  #projects .mb-12,
+  #contact .mb-12 {
+    margin-bottom: 6mm !important;
+  }
+
+  #contact > div > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8mm !important;
+  }
+
+  #contact > div > div:first-child {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  input,
+  textarea {
+    background: rgb(55 65 81) !important;
+    border-color: rgb(75 85 99) !important;
+    color: rgb(248 250 252) !important;
+  }
+
+  img,
+  svg,
+  input,
+  textarea {
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration-skip-ink: auto;
+  }
+}
