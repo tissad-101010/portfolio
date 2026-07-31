@@ -6,7 +6,7 @@
 /*   By: tissad <tissad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:53:06 by tissad            #+#    #+#             */
-/*   Updated: 2026/02/24 20:42:02 by tissad           ###   ########.fr       */
+/*   Updated: 2026/07/31 11:53:37 by tissad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ export default function Projects() {
 			github: 'https://github.com/tissad-101010/ft_transcendence.git',
 		},
 		{
-			title: '42 LoiHub',
+			title: 'LoiHub',
 			description: 'LoiHub is an AI-powered web application that reimagines the legislative process \
 			 as a GitHub-like experience. It allows users to browse laws, track amendments as commits, \
 			 compare legislative revisions, explore timelines, and generate AI summaries from official \
